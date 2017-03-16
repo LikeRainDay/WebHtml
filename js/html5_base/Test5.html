@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+<datalist> 标签规定了 <input> 元素可能的选项列表。
+<datalist> 标签被用来在为 <input> 元素提供"自动完成"的特性。
+用户能看到一个下拉列表，里边的选项是预先定义好的，将作为用户的输入数据。
+请使用 <input> 元素的 list 属性来绑定 <datalist> 元素。
+-->
+<form action="demo-form.php" method="get">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <input type="submit">
+</form>
+
+<p><strong>注意:</strong> Internet Explorer 9（更早 IE 版本），Safari 不支持 datalist 标签。</p>
+
+
+</body>
+</html>
