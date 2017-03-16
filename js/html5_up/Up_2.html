@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="result"></div>
+<!--
+
+实例解析：
+使用 key="sitename" 和 value="菜鸟教程" 创建一个 localStorage 键/值对。
+检索键值为"sitename" 的值然后将数据插入 id="result"的元素中。
+以上实例也可以这么写：
+// 存储
+localStorage.sitename = "菜鸟教程";
+// 查找
+document.getElementById("result").innerHTML = localStorage.sitename;
+移除 localStorage 中的 "lastname" :
+localStorage.removeItem("lastname");
+不管是 localStorage，还是 sessionStorage，可使用的API都相同，常用的有如下几个（以localStorage为例）：
+保存数据：localStorage.setItem(key,value);
+读取数据：localStorage.getItem(key);
+删除单个数据：localStorage.removeItem(key);
+删除所有数据：localStorage.clear();
+得到某个索引的key：localStorage.key(index);
+提示: 键/值对通常以字符串存储，你可以按自己的需要转换该格式。
+-->
+<script>
+    if (typeof (Storage) != "undefined") {
+        //是的支持，LocalStorage,sessionStorage对象
+        localStorage.sitename = "菜鸟教程"
+        document.getElementById("result").innerHTML = "网站名：" + localStorage.sitename;
+
+    } else {
+        //抱歉  不支持web存储
+        document.getElementById("result").innerHTML = "对不起，您的浏览器不支持web存储"
+    }
+
+</script>
+
+
+</body>
+</html>

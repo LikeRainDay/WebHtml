@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--LocalStorage进行长时间存储-->
+    <script>
+        function clickCounter() {
+            if (typeof (Storage) != "undefined") {
+                if (localStorage.clickout) {
+                    localStorage.clickout = Number(localStorage.clickout) + 1;
+                } else {
+                    localStorage.clickout = 1;
+                }
+                document.getElementById("result").innerHTML = "你已经点击了按钮" + localStorage.clickout + "次";
+            } else {
+                document.getElementById("result").innerHTML = "对不起，您的浏览器不支持";
+
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+
+<P>
+    <button onclick="clickCounter()" type="button">点我吧！</button>
+</P>
+<div id="result"></div>
+
+
+</body>
+</html>
